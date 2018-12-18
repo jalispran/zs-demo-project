@@ -2,8 +2,8 @@ const fs 		= require('fs');
 const jwt 		= require('jsonwebtoken');
 // http://travistidwell.com/blog/2013/09/06/an-online-rsa-public-and-private-key-generator/
 // use 'utf8' to get string instead of byte array  (1024 bit key)
-var privateKEY 	= fs.readFileSync('./private.key', 'utf8'); // to sign JWT
-var publicKEY 	= fs.readFileSync('./public.key', 'utf8'); 	// to verify JWT
+var privateKEY 	= fs.readFileSync('./jwt-module/private.key', 'utf8'); // to sign JWT
+var publicKEY 	= fs.readFileSync('./jwt-module/public.key', 'utf8'); 	// to verify JWT
 
 module.exports = {
 	sign: (payload, $Options) => {

@@ -1,4 +1,5 @@
 const expressConfig = require('./config/expressConfig');
+const jwt = require('./jwt-module/jwt-module');
 
 var user = {
     "name" : "pranjal",
@@ -18,4 +19,13 @@ app.get('/list-users', function(req, res){
         array.push(user);
     }
     res.end(JSON.stringify(array));
+})
+
+app.get('/jwt',function(req, res){
+    var name = req.param('name');
+    console.log('name : ' + name);
+    var token = jwt.sign({'partyName':name}, {'issuer':'jalispran',
+                                'subject':'just for fun',
+                                'audience':name + ' ' + name});
+    res.end(token);
 })
