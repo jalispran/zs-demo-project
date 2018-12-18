@@ -52,3 +52,24 @@ module.exports = {
 		return jwt.decode(token, {complete: true});
 	}
 }
+
+/*
+{
+  "aud": [
+    "GAP-Resource",
+    "CLEO-Resource"
+  ],
+  "user_name": "915555555555",
+  "scope": [
+    "read",
+    "write"
+  ],
+  "exp": 1541548315,
+  "authorities": [
+    "MA",
+    "ROLE_OWNER"
+  ],
+  "jti": "94868828-f866-4639-9182-71a6deb0f50e",
+  "client_id": "testjwtclientid"
+}
+*/
