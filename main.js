@@ -1,7 +1,7 @@
 const expressConfig = require('./config/expressConfig');
 
 var user = {
-    "name" : "mohit",
+    "name" : "pranjal",
     "password" : "password4",
     "profession" : "teacher",
     "id": 4
